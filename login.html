@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container mt-5">
+      <h2>Login</h2>
+      <form id="loginForm" onsubmit="return handleLogin(event)">
+        <div class="form-group">
+          <label for="loginUsername">Username</label>
+          <input type="text" class="form-control" id="loginUsername" required />
+        </div>
+        <div class="form-group">
+          <label for="loginPassword">Password</label>
+          <input
+            type="password"
+            class="form-control"
+            id="loginPassword"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn-primary">Login</button>
+        <p class="mt-3">
+          Don't have an account? <a href="signup.html">Sign up here</a>
+        </p>
+      </form>
+    </div>
+
+    <script>
+      function handleLogin(event) {
+        event.preventDefault(); // Prevents the form from submitting normally
+
+        // Add any validation logic if necessary, e.g., check username and password
+
+        // If validation is successful, redirect to index.html
+        window.location.href = "index.html";
+      }
+    </script>
+    <script src="script.js"></script>
+  </body>
+</html>

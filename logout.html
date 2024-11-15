@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Log Out</title>
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+        background-color: #f8f9fa;
+        font-family: Arial, sans-serif;
+      }
+      .logout-container {
+        text-align: center;
+        background: #ffffff;
+        padding: 30px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      }
+      .logout-container h1 {
+        font-size: 2rem;
+        margin-bottom: 10px;
+        color: #333333;
+      }
+      .logout-container p {
+        color: #555555;
+        font-size: 1.1rem;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="logout-container">
+      <h1>Logged Out</h1>
+      <p>You have successfully logged out.</p>
+      <!-- Log In Button to trigger modal -->
+      <button
+        type="button"
+        class="btn btn-primary"
+        data-toggle="modal"
+        data-target="#confirmModal"
+      >
+        Return to Login
+      </button>
+    </div>
+
+    <!-- Confirmation Modal -->
+    <div
+      class="modal fade"
+      id="confirmModal"
+      tabindex="-1"
+      aria-labelledby="confirmModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmModalLabel">Confirmation</h5>
+            <button
+              type="button"
+              class="close"
+              data-dismiss="modal"
+              aria-label="Close"
+            >
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">Are you sure you want to log in again?</div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-dismiss="modal"
+            >
+              Cancel
+            </button>
+            <a href="login.html" class="btn btn-primary">Yes, Log In</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies (jQuery and Popper.js) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
